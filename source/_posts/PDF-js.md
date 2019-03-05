@@ -76,10 +76,26 @@ var RenderingStates = {
 ![img](http://pe5s1kztp.bkt.clouddn.com/images/PDF%E8%AD%A6%E5%91%8A.jpg "PDF未完全加载已供打印")
 
 嗯==，然后我实在没有找到很合适的地方去调用打印的这个方法，最后在这里加上的
-![img](http://pe5s1kztp.bkt.clouddn.com/images/menu.saveimg.savepath20180907155350.jpg)
+![img](/uploads/PDFRenderingQueue_getHighestPriority里面点击打印.jpg)
+在PDFRenderingQueue原型里面的PDFRenderingQueue_getHighestPriority方法里调用
+
+ ```
+ if (sessionStorage.isPrint === 'true') {
+                document.getElementById('print').click();
+                sessionStorage.isPrint=false;
+            }
+            ```
 
 这样以后，‘PDF未完全加载已供打印’的提示没有的，打印页面也正常了。
 
 注意`sessionStorage.isPrint=false;`这个控制语句要加上，不然即使点击了取消打印预览窗口，该窗口还是会不断弹出来。
 
-如果有更好的方案，请不吝赐教，在下面留言，在下感激不尽。
+## 实现类似直接打印效果（不预览）
+
+ **思路：将弹出窗口的尺寸放到最小，打印完成后，自动将窗口关闭**
+1.	创建谷歌浏览器快捷方式（下次要从快捷方式打开）
+2.	快捷方式，右击->属性->目标 的尾部添加  --kiosk-printing 注意前面有空格 ![img](/uploads/add--kiosk-printing.png)
+ **实际上，这步之后，window.print(),就不会弹出预览窗口了**
+3. pdfjs里面有对 **beforeprint**和 **afterprint**两个方法监听，只需在afterprint方法里面将窗口关闭就可。
+
+以上只针对一些项目需要的功能进行处理。

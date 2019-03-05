@@ -147,12 +147,12 @@ social_icons:
   transition: false
 
 # Blog rolls
-links_icon: link
-links_title: 友情链接
-links_layout: block
-#links_layout: inline
-links:
-  behance: https://www.behance.net/Jessie_Lee
+# links_icon: link
+# links_title: 友情链接
+# links_layout: block
+# #links_layout: inline
+# links:
+#   behance: https://www.behance.net/Jessie_Lee
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -247,7 +247,7 @@ post_wordcount:
 # Reward
 reward_comment: 哈哈哈 万一有人真的赏了呢
 #wechatpay: /images/wechatpay.jpg
-alipay: /AnastasiaJ/uploads/alipay.jpg
+alipay: /uploads/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
@@ -677,7 +677,7 @@ motion:
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce

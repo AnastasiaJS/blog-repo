@@ -8,12 +8,15 @@ subtitle:
 description: 大厦千顷，眠七尺之躯，袖珍百味，不过一饱。
 keywords: 
 author: Anastasia
-language: zh-Hans
+language: 
+  - zh-Hans
+  - zh-tw
+  - en  
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url:  https://Anastasia.github.io/
+url:  https://anastasiajs.github.io/
 root: /
 permalink: :title/:year/:month/:day/
 permalink_defaults:
@@ -79,12 +82,12 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  branch: gh-pages
+  # branch: gh-pages
   repo: https://github.com/AnastasiaJS/AnastasiaJS.github.io.git
 
 # Local Search
 search:
-  path: /AnastasiaJ/search.xml
+  path: /search.xml
   field: post
   format: html
   limit: 10000
@@ -109,5 +112,14 @@ algolia:
 
 
 # 自动生成sitemap
+# sitemap:
+# path: sitemap.xml
 baidusitemap:
 path: baidusitemap.xml
+
+# 减少出站链接能够有效防止权重分散,该插件会将博客中的出站链接自动加上nofollow属性
+nofollow:
+    enable: true
+    exclude:
+    # - www.langzi.fun
+    # - 友链地址  

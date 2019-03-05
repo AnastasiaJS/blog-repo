@@ -15,12 +15,10 @@
   },
   "keywords": [
     "NexT",
-    "Hexo"
+    "Hexo",
+    "Anastasia"
   ],
-  "author": "iissnan <iissnan@gmail.com>",
-  "maintainers": [
-    "Ivan Nginx <ivan.nginx@gmail.com> (https://almostover.ru)"
-    ],
+  "author": "Anastasia <245915765@qq.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iissnan/hexo-theme-next/issues"
