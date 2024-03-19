@@ -8,7 +8,7 @@
   "scripts": {
     "build": "hexo clean && hexo g && gulp build",
     "start": "hexo s --debug",
-    "publish": "hexo clean && hexo g -d"
+    "publish": "hexo clean && hexo d -g"
   },
   "dependencies": {
     "aplayer": "^1.10.1",
@@ -33,6 +33,7 @@
     "hexo-renderer-marked": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.1",
-    "hexo-tag-aplayer": "^3.0.4"
+    "hexo-tag-aplayer": "^3.0.4",
+    "js-yaml": "^4.1.0"
   }
 }

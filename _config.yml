@@ -45,8 +45,9 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
-
+  tab_replace: ''
+  wrap: true
+  hljs: false
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -80,10 +81,10 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
+deploy: 
   type: git
-  # branch: gh-pages
-  repo: https://github.com/AnastasiaJS/AnastasiaJS.github.io.git
+  branch: master
+  repo: https://github.com/AnastasiaJS/AnastasiaJS.github.io
 
 # Local Search
 search:
@@ -114,7 +115,7 @@ algolia:
 # 自动生成sitemap
 # sitemap:
 # path: sitemap.xml
-baidusitemap:
+baidusitemap: ''
 path: baidusitemap.xml
 
 # 减少出站链接能够有效防止权重分散,该插件会将博客中的出站链接自动加上nofollow属性
